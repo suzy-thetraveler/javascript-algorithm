@@ -7,8 +7,17 @@
     <script>
       function solution(a, b, c) {
         let answer = 'YES';
+        //wrong answer
+        //if (a + c < b || a + b < c || c + b < a) answer = 'NO';
 
-        if (a + c < b || a + b < c || c + b < a) answer = 'NO';
+        const total = a + b + c;
+        let max;
+        if (a > b) max = a;
+        else max = b;
+        if (max < c) max = c;
+
+        if (total - max < max) answer = 'NO';
+        //max 값을 변수를 지정해서 주기
 
         return answer;
       }
