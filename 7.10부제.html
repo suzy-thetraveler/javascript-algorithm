@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(a, arr) {
+        let answer = 0;
+
+        for (let i of arr) {
+          if (i % 10 === a) answer++;
+        }
+
+        return answer;
+      }
+
+      console.log(solution(3, [25, 23, 11, 47, 53, 17, 33]));
+    </script>
+  </body>
+</html>
