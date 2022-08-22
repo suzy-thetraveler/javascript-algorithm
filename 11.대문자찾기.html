@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(a) {
+        let answer = 0;
+        let tmpString;
+        tmpString = a.toLowerCase();
+        for (let i = 0; i < a.length; i++) {
+          if (tmpString.charAt(i) !== a.charAt(i)) answer++;
+        }
+
+        /**
+         * 대문자로 바꿨을 때와 같으면 숫자를 증가시키는 방법
+         * for(let i of a){
+         *   if(i === i.toUpperCase()) answer ++;
+         * }
+         *
+         * ASCII code로 확인하는 방법
+         * 65 <= 대문자 <=90
+         * for(let i of a){
+         *   if(i.charCodeAt() >= 65 && i.charCodeAt() <= 90) anser++;
+         * }
+         *
+         */
+
+        return answer;
+      }
+
+      console.log(solution('KoreaTimeGood'));
+    </script>
+  </body>
+</html>

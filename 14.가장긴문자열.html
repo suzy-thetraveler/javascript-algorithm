@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(int, string) {
+        let answer;
+        let max = 0;
+        for (let i = 0; i < int; i++) {
+          if (string[i].length > max) {
+            max = string[i].length;
+            answer = string[i];
+          }
+        }
+
+        return answer;
+      }
+
+      console.log(
+        solution(5, ['teacher', 'time', 'student', 'beautiful', 'good'])
+      );
+    </script>
+  </body>
+</html>

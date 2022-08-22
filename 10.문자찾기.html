@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(string, char) {
+        let answer = 0;
+        for (let a of string) {
+          if (a === char) answer++;
+        }
+
+        /**
+         * 위의 방법도 좋지만
+         * answer = string.split(char).length -1;
+         * 의 방법도 존재. split은 해당 부분의 앞까지 잘라서 새로운 배열로 리턴한다
+         *
+         */
+
+        return answer;
+      }
+
+      console.log(solution('COMPUTERPROGRAMMING', 'R'));
+    </script>
+  </body>
+</html>
