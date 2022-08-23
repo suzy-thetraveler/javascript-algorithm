@@ -1,5 +1,11 @@
 function solution(int, numbers) {
-  let answer;
+  let answer = [];
+  answer.push(numbers[0]);
+
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > numbers[i - 1]) answer.push(numbers[i]);
+    else continue;
+  }
 
   return answer;
 }
