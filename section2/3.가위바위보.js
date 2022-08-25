@@ -19,6 +19,12 @@ function solution(int, A, B) {
       continue;
     }
   }
+  /**
+   * 이렇게 해도 무방하지만
+   * A가 이기는 상황만을 조건문으로 작성하고
+   * 나머지는 다 B가 이기는 것으로 작성해도 좋음.
+   * -> 이게 더 깔끔한 코드같음
+   */
 
   return answer;
 }
