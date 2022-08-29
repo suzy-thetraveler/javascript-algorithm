@@ -1,4 +1,5 @@
 function isPrime(int) {
+  if (int === 1) return false;
   for (let i = 2; i <= Math.sqrt(int); i++) {
     if (int % i === 0) return false;
   }
@@ -6,12 +7,16 @@ function isPrime(int) {
 }
 function solution(int, numbers) {
   let answer = [];
-  let tmp = 0;
   let cnt = 0;
   for (let n of numbers) {
-    while (n) {
-      tmp = n / 10;
+    let tmp = n;
+    while (tmp) {
+      cnt = cnt * 10 + (tmp % 10);
+      tmp = Math.floor(tmp / 10);
+      //floor 대신에 parse int를 해도 무방하다.
     }
+    if (isPrime(cnt)) answer.push(cnt);
+    cnt = 0;
 
     // n = parseInt(String(n).split('').reverse().join(''));
     // for (let i = 2; i < 10; i++) {
