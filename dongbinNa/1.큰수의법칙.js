@@ -13,4 +13,3 @@ function solution(num, arr) {
 
   return answer;
 }
-console.log(solution([5, 8, 3], [2, 4, 5, 4, 6]));
